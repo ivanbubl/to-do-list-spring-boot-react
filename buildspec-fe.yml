@@ -10,7 +10,6 @@ phases:
       - echo Build started on `date`
       - cd frontend
       - find src/ -type f -exec sed -i 's/localhost:3001/54.227.68.65:3001/g' {} +
-      - nvm install 16
       - npm run build
       - docker build -t todo-fe:latest .
   post_build:
