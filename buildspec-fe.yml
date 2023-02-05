@@ -9,6 +9,7 @@ phases:
   build:
     commands:
       - echo Build started on `date`
+      - npm install
       - cd frontend
       - find src/ -type f -exec sed -i 's/localhost:3001/54.227.68.65:3001/g' {} +
       - npm run build
