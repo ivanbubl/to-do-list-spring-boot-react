@@ -10,6 +10,7 @@ phases:
       - echo Build started on `date`
       - cd backend
       - cd to-do-list
+      - mvn clean install
       - docker build -t todo-be:latest .
   post_build:
     commands:
