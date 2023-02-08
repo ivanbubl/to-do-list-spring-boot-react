@@ -17,7 +17,7 @@ function Signup({isAuthenticated, setIsAuthenticated}) {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:3001/api/auth/signup', {username, password});
+      const response = await axios.post('http://todo-be-ecs-lb-3-539608311.us-east-1.elb.amazonaws.com/api/auth/signup', {username, password});
       sessionStorage.setItem('token', response.data.token);
       sessionStorage.setItem('name', response.data.username);
       setIsAuthenticated(true);
