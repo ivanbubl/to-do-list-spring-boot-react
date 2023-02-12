@@ -7,7 +7,7 @@ phases:
       - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 368888336862.dkr.ecr.us-east-1.amazonaws.com
   build:
     commands:
-      - echo Build started on `date`
+      - echo Build started on `date` dev
       - cd backend
       - cd to-do-list
       - mvn clean install
