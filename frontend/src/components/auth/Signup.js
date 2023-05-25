@@ -17,7 +17,7 @@ function Signup({isAuthenticated, setIsAuthenticated}) {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://34.224.2.107:3001/api/auth/signup', {username, password});
+      const response = await axios.post('http://bubluk-ivan-green-blue-lb-232632597.us-east-1.elb.amazonaws.com/api/auth/signup', {username, password});
       sessionStorage.setItem('token', response.data.token);
       sessionStorage.setItem('name', response.data.username);
       setIsAuthenticated(true);

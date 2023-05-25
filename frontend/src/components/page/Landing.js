@@ -20,7 +20,7 @@ export default function Landing({isAuthenticated, setIsAuthenticated}) {
   useEffect(() => {
     async function getAndSetNumberAllTodo() {
       try{
-        const response = await axios.get('http://34.224.2.107:3001/api/todo/count', {
+        const response = await axios.get('http://bubluk-ivan-green-blue-lb-232632597.us-east-1.elb.amazonaws.com/api/todo/count', {
           headers: {
             'Authorization': `Bearer ${sessionStorage.getItem('token')}`,
           }
@@ -38,7 +38,7 @@ export default function Landing({isAuthenticated, setIsAuthenticated}) {
 
     async function getAndSetNumberAllTodoNotCompleted() {
       try{
-        const response = await axios.get('http://34.224.2.107:3001/api/todo/count?isCompleted=false', {
+        const response = await axios.get('http://bubluk-ivan-green-blue-lb-232632597.us-east-1.elb.amazonaws.com/api/todo/count?isCompleted=false', {
           headers: {
             'Authorization': `Bearer ${sessionStorage.getItem('token')}`,
           }

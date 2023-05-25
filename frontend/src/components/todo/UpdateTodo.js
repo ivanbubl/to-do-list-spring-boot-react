@@ -49,7 +49,7 @@ function UpdateTodo({isAuthenticated, setIsAuthenticated, match}) {
     const loadData = async () => {
       let response = null;
       try {
-        response = await axios.get(`http://34.224.2.107:3001/api/todo/${match.params.id}`, {
+        response = await axios.get(`http://bubluk-ivan-green-blue-lb-232632597.us-east-1.elb.amazonaws.com/api/todo/${match.params.id}`, {
           headers: {
 						'Authorization': `Bearer ${sessionStorage.getItem('token')}`
 					}
